@@ -1,24 +1,48 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Blog App
 
-Things you may want to cover:
+> A fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-* Ruby version
+## Built With
 
-* System dependencies
+> Ruby
+> Ruby on Rails
+> HTML
+> CSS
 
-* Configuration
+## Getting Started
 
-* Database creation
+Clone this repo: https://github.com/DiegoMero/blog-app.git
 
-* Database initialization
+- Go to the repo directory from the comand line.
+- Run 
+```
+ruby main.rb
+```
 
-* How to run the test suite
+## Author
 
-* Services (job queues, cache servers, search engines, etc.)
+👤 **Diego Mero**
+- GitHub: [@DiegoMero](https://github.com/DiegoMero)
+- Twitter: [@Dimero18](https://twitter.com/Dimero18)
+- LinkedIn: [Diego](https://www.linkedin.com/in/diego-mero/)
 
-* Deployment instructions
 
-* ...
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Thanks to my learning partners for their support and advices
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
