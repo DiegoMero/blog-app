@@ -10,38 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_02_032844) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_08_102002) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
+    t.integer "authorId"
+    t.integer "postId"
     t.text "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "author_id", null: false
-    t.bigint "posts_id", null: false
-    t.index ["posts_id"], name: "index_comments_on_posts_id"
-    t.index ["author_id"], name: "index_comments_on_author_id"
+    t.index ["authorId"], name: "index_comments_on_authorId"
+    t.index ["postId"], name: "index_comments_on_postId"
   end
 
   create_table "likes", force: :cascade do |t|
+    t.integer "authorId"
+    t.integer "postId"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "author_id", null: false
-    t.bigint "posts_id", null: false
-    t.index ["posts_id"], name: "index_likes_on_posts_id"
-    t.index ["author_id"], name: "index_likes_on_author_id"
+    t.index ["authorId"], name: "index_likes_on_authorId"
+    t.index ["postId"], name: "index_likes_on_postId"
   end
 
   create_table "posts", force: :cascade do |t|
+    t.integer "authorId"
     t.string "title"
     t.text "text"
     t.integer "commentsCounter"
     t.integer "likesCounter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "author_id", null: false
-    t.index ["author_id"], name: "index_posts_on_author_id"
+    t.index ["authorId"], name: "index_posts_on_authorId"
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,9 +53,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_02_032844) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "comments", "posts", column: "posts_id"
-  add_foreign_key "comments", "author", column: "author_id"
-  add_foreign_key "likes", "posts", column: "posts_id"
-  add_foreign_key "likes", "author", column: "author_id"
-  add_foreign_key "posts", "author", column: "author_id"
+  add_foreign_key "comments", "posts", column: "postId"
+  add_foreign_key "comments", "users", column: "authorId"
+  add_foreign_key "likes", "posts", column: "postId"
+  add_foreign_key "likes", "users", column: "authorId"
+  add_foreign_key "posts", "users", column: "authorId"
 end
