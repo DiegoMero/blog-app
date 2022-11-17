@@ -1,1 +1,3 @@
-<h1>Here is a list of posts for a specific user</h1>
+<% user = User.find(params[:id]) %>
+<h1><%= user.name %></h1>
+<h4>Number of posts: <%= user.postsCounter %></h4>

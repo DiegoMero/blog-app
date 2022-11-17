@@ -1,1 +1,15 @@
-<h1>Here is the information about a specific user</h1>
+<% user = User.find(params[:id]) %>
+<h1><%= user.name %></h1>
+<h4>Number of posts: <%= user.postsCounter %></h4>
+<h3>Bio<h3>
+<h3><%= user.bio %></h3>
+<% posts = Post.where(authorId: params[:id])%>
+<% posts.each do |post| %>
+  <div>
+    <h4><%= post.title %></h4>
+    <h4><%= post.text %><h4>
+    <h5>Comments: <%= post.commentsCounter %></h5>
+    <h5>Likes: <%= post.likesCounter %></h5>
+  </div>
+<% end %>
+<button>See all posts</button>
