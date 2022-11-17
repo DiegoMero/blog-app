@@ -1,15 +1,22 @@
-<% user = User.find(params[:id]) %>
-<h1><%= user.name %></h1>
-<h4>Number of posts: <%= user.postsCounter %></h4>
-<h3>Bio<h3>
-<h3><%= user.bio %></h3>
-<% posts = Post.where(authorId: params[:id])%>
-<% posts.each do |post| %>
-  <div>
-    <h4><%= post.title %></h4>
-    <h4><%= post.text %><h4>
-    <h5>Comments: <%= post.commentsCounter %></h5>
-    <h5>Likes: <%= post.likesCounter %></h5>
+<div class="user-element">
+  <div class="photo"><%= @user.photo %></div>
+  <div class="user-information">
+    <h2><%= @user.name %></h2>
+    <h4>Number of posts: <%= @user.postsCounter %></h4>
   </div>
-<% end %>
-<button>See all posts</button>
+</div>
+<div class="bio">
+  <h4>Bio</h4>
+  <p><%= @user.bio %></p>
+</div>
+<% @posts = @user.three_most_recent_posts %>
+<ul>
+  <% @posts.each do |post| %>
+    <li class="post-element">
+      <h3><%= post.title %></h3>
+      <p><%= post.text %></p>
+      <h5>Comments: <%= post.commentsCounter %>, Likes: <%= post.likesCounter %></h5>
+    </li>
+  <% end %>
+</ul>
+<button class="posts-button">See all posts</button>
