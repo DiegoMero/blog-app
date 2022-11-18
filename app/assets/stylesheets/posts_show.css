@@ -1,0 +1,10 @@
+.post-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-by-user {
+  border: 3px solid black;
+  padding: 10px;
+  width: 480px;
+}

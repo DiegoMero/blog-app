@@ -1,0 +1,24 @@
+.comments-section {
+  border: 3px solid black;
+  padding: 10px;
+  width: 480px;
+  margin-top: 5px;
+}
+
+.post {
+  margin-left: 0;
+  margin-bottom: 35px;
+}
+
+.post-element h3 {
+  margin-top: 0;
+}
+
+.post-element h5 {
+  margin-bottom: 0;
+}
+
+.comments-section p {
+  margin-top: 0;
+  margin-bottom: 2.5px;
+}

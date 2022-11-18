@@ -1,0 +1,22 @@
+.bio {
+  border: 3px solid black;
+  margin-top: 15px;
+  padding: 10px;
+  width: 480px;
+}
+
+.post-element {
+  border: 3px solid black;
+  margin-left: 0;
+  padding: 10px;
+  width: 480px;
+}
+
+.post-element h5 {
+  text-align: end;
+}
+
+.posts-button {
+  margin-left: 180px;
+  border: 3px solid black;
+}

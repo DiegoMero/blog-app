@@ -1,1 +1,21 @@
-<h1>Here is the information about a specific post</h1>
+<% if @user.postsCounter == 0 %>
+  <h2>This user does not have any post</h2>
+<% else %>
+  <div class='post-by-user'>
+    <div class='post-header'>
+      <h3><%= @post.title %> by <%= @user.name %></h3>
+      <h5>Comments: <%= @post.commentsCounter %>, Likes: <%= @post.likesCounter %></h5>
+    </div>
+    <h3><%= @post.text %></h3>
+  </div>
+  <div class="comments-section">
+    <% comments = Comment.where(postId: @post.id) %>
+      <% if @post.commentsCounter == 0 %>
+        <p>No comments yet</p>
+      <% else %>
+        <% comments.each do |comment| %>
+          <p><%= @users[(comment.authorId - 1)].name %>: <%= comment.text %></p>
+        <% end %>
+      <% end %>
+  </div>
+<% end %>

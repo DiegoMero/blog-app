@@ -7,6 +7,10 @@ class Post < ApplicationRecord
   validates :commentsCounter, numericality: { greater_than_or_equal_to: 0 }
   validates :likesCounter, numericality: { greater_than_or_equal_to: 0 }
 
+  after_save :update_posts_counter
+
+  private
+
   def update_posts_counter
     user = User.find(authorId)
     user.update(postsCounter: Post.where(authorId: user.id).count)
