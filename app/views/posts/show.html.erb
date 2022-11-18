@@ -22,6 +22,8 @@
 <%= form_with model: Comment, url: user_post_comments_path(@user, @post) do |f| %>
   <%= f.label :text %><br>
   <%= f.text_field :text %>
-</div>
 <%= f.submit "Add comment" %>
+<% end %>
+<%= form_with model: Like, url: user_post_likes_path(@user, @post) do |f| %>
+<%= f.submit "Add like!" %>
 <% end %>
