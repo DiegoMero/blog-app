@@ -14,7 +14,7 @@
         <h5>Comments: <%= post.commentsCounter %>, Likes: <%= post.likesCounter %></h5>
       </div>
       <div class="comments-section">
-        <% comments = Comment.where(postId: post.id) %>
+        <% comments = post.five_most_recent_comments %>
         <% if post.commentsCounter == 0 %>
           <p>No comments yet</p>
         <% else %>
