@@ -4,8 +4,8 @@ class Like < ApplicationRecord
 
   after_save :update_likes_counter
 
-  private 
-  
+  private
+
   def update_likes_counter
     post = Post.find(postId)
     post.update(likesCounter: Like.where(postId: post.id).count)
