@@ -13,6 +13,7 @@ li {
   word-wrap: break-word;
   border: 3px solid black;
 }
+
 .user-element {
   display: flex;
   align-items: center;
