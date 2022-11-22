@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 RSpec.describe 'PostsControllers', type: :request do
   it 'should return a positive response status' do
     get '/users/1/posts'

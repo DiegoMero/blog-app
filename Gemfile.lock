@@ -274,7 +274,7 @@ DEPENDENCIES
   sprockets-rails
   stimulus-rails
   turbo-rails
-  tzinfo-data (~> 1.2022, >= 1.2022.6)
+  tzinfo-data
   web-console
   webdrivers
 
@@ -282,4 +282,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.7
+   2.3.24
