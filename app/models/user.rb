@@ -7,6 +7,6 @@ class User < ApplicationRecord
   validates :postsCounter, numericality: { greater_than_or_equal_to: 0 }
 
   def three_most_recent_posts
-    Post.includes(:author).where(authorId: id).last(3)
+    Post.where(authorId: id).last(3)
   end
 end

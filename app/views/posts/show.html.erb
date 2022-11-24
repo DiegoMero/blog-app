@@ -9,14 +9,13 @@
     <h3><%= @post.text %></h3>
   </div>
   <div class="comments-section">
-    <% comments = Comment.where(postId: @post.id) %>
-      <% if @post.commentsCounter == 0 %>
-        <p>No comments yet</p>
-      <% else %>
-        <% comments.each do |comment| %>
-          <p><%= @users[(comment.authorId - 1)].name %>: <%= comment.text %></p>
-        <% end %>
+    <% if @post.commentsCounter == 0 %>
+      <p>No comments yet</p>
+    <% else %>
+      <% @comments.each do |comment| %>
+        <p><%= comment.author.name %>: <%= comment.text %></p>
       <% end %>
+    <% end %>
   </div>
 <% end %>
 <%= form_with model: Comment, url: user_post_comments_path(@user, @post) do |f| %>
