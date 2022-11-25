@@ -1,35 +1,70 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# 📗 Table of Contents
 
-# Blog App
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+- [👥 Authors](#authors)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-The Blog App, is a website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
+<!-- PROJECT DESCRIPTION -->
 
+# 📖 Blog App <a name="about-project"></a>
 
-## Built With
+> The Blog App, is a website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-<img alt="Run on Rails Badge" src= "https://img.shields.io/badge/Ruby_on_Rails-CC0000?style=for-the-badge&logo=ruby-on-rails&logoColor=white"><br>
+## 🛠 Built With <a name="built-with"></a>
 
-## Live Demo (if available)
+### Tech Stack <a name="tech-stack"></a>
 
-[coming soon](https://livedemo.com)
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">Ruby on Rails</a></li>
+  </ul>
+</details>
 
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
 
-## Getting Started
+<!-- Features -->
 
-Clone this repo: https://github.com/jdbs9514/blog.git
+### Key Features <a name="key-features"></a>
+
+- **Login**
+- **Create Posts**
+- **Create comments and like posts**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LIVE DEMO -->
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+Clone this repo: git@github.com:DiegoMero/blog-app.git
 
 - Open irb on comand line.
 - Run the code 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- AUTHORS -->
 
-To get a local copy up and running follow these simple example steps.
+## 👥 Authors <a name="authors"></a>
 
-### Prerequisites
-
-- JavaScript
-- React
-- Ruby
-## Authors
+👤 **Diego Mero**
+- GitHub: [@DiegoMero](https://github.com/DiegoMero)
+- Twitter: [@Dimero18](https://twitter.com/Dimero18)
+- LinkedIn: [Diego](https://www.linkedin.com/in/diego-mero/)
 
 👤 **Josué Benavides**
 
@@ -37,24 +72,42 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@twitter](https://twitter.com/JODA1015)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/macoin)
 
-## 🤝 Contributing
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
+<!-- SUPPORT -->
 
-## Acknowledgments
+## ⭐️ Show your support <a name="support"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+> Leave a comment if you like the app!
 
-## 📝 License
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+> Thanks to Microverse
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
