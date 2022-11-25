@@ -13,11 +13,13 @@
   <% @posts = @user.three_most_recent_posts %>
   <ul>
     <% @posts.each do |post| %>
-    <li class="post-element">
-      <h3><%= post.title %></h3>
-      <p><%= post.text %></p>
-      <h5>Comments: <%= post.commentsCounter %>, Likes: <%= post.likesCounter %></h5>
-    </li>
+      <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
+      <li class="post-element">
+        <h3><%= post.title %></h3>
+        <p><%= post.text %></p>
+        <h5>Comments: <%= post.commentsCounter %>, Likes: <%= post.likesCounter %></h5>
+      </li>
+      <% end %>
     <% end %>
   </ul>
   <%= link_to user_posts_path(@user) do %>

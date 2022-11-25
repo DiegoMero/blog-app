@@ -37,6 +37,14 @@ RSpec.describe 'User', type: :feature do
       expect(page).to have_content('See all posts')
     end
 
+    it 'redirects to the me to that posts show page when clicked' do
+      @posts = @user.three_most_recent_posts
+      @posts.each do |post|
+        click_on(post.text)
+        expect(page).to have_current_path("/users/#{@user.id}/posts/#{@post.id}")
+      end
+    end
+
     it 'redirects to user posts index when cliked' do
       click_link('See all posts')
       expect(page).to have_current_path("/users/#{@user.id}/posts")
