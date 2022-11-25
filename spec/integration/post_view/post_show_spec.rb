@@ -2,10 +2,15 @@ require 'rails_helper'
 
 RSpec.describe 'Post', type: :feature do
   describe 'show page' do
-
     before :each do
-      @user = User.create(name: 'Tom', bio: 'Teacher from Mexico.', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', postsCounter: 1)
-      @user2 = User.create(name: 'Lilly', bio: 'Teacher from Poland.', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', postsCounter: 0)
+      @user = User.create(name: 'Tom',
+                          bio: 'Teacher from Mexico.',
+                          photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                          postsCounter: 1)
+      @user2 = User.create(name: 'Lilly',
+                           bio: 'Teacher from Poland.',
+                           photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                           postsCounter: 0)
       @post = Post.create(author: @user, title: 'Hello', text: 'This is my first post')
     end
 

@@ -2,9 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'User', type: :feature do
   describe 'index page' do
-
     before :each do
-      @user = User.create(name: 'Tom', bio: 'Teacher from Mexico.', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', postsCounter: 0)
+      @user = User.create(name: 'Tom',
+                          bio: 'Teacher from Mexico.',
+                          photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                          postsCounter: 0)
       visit '/users'
     end
 

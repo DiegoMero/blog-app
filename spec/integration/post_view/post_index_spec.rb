@@ -2,9 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'Post', type: :feature do
   describe 'index page' do
-
     before :each do
-      @user = User.create(name: 'Tom', bio: 'Teacher from Mexico.', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', postsCounter: 1)
+      @user = User.create(name: 'Tom',
+                          bio: 'Teacher from Mexico.',
+                          photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                          postsCounter: 1)
       @post = Post.create(author: @user, title: 'Hello', text: 'This is my first post')
       visit "/users/#{@user.id}/posts"
     end
