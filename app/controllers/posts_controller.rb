@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   def show
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
-    @users = User.all.order(id: :asc)
+    @comments = Comment.where(postId: @post.id)
   end
 
   def new

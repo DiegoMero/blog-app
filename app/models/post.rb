@@ -10,7 +10,7 @@ class Post < ApplicationRecord
   after_save :update_posts_counter
 
   def five_most_recent_comments
-    Comment.where(postId: id).last(5)
+    Comment.includes(:author).where(postId: id).last(5)
   end
 
   private
